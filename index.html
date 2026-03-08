@@ -3,40 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorry Letter for Khushi</title>
+    <title>Sorry Letter for Khushi - From Yathaarth</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="particleCanvas"></canvas>
+    <div id="hearts-container"></div>
+    <div id="sparkles-container"></div>
+    
     <div id="page1" class="page active">
-        <div class="content">
-            <p>😔 I made a mistake and I'm really sorry</p>
-            <button onclick="nextPage()">Begin</button>
+        <div class="content welcome-box">
+            <div class="header-decoration">✨ 💕 ✨</div>
+            <h1 class="main-title">I'm Sorry, Khushi</h1>
+            <div class="emoji-animation">😔</div>
+            <p class="subtitle">I made a mistake and I'm really, truly sorry for it...</p>
+            <button onclick="toggleAudio(); nextPage()" class="btn-fancy">Begin My Apology</button>
+            <div class="footer-decoration">🌷 🌷 🌷</div>
         </div>
     </div>
+    
     <div id="page2" class="page">
-        <div class="content letter">
-            <h1>Dear Khushi,</h1>
-            <p>I realize I made a mistake, and I'm truly sorry for it. I promise to pay more attention in the future and ensure I don't repeat it. Your happiness means everything to me, and I hope you can forgive me.</p>
-            <p>I'm trying to better myself every day, to be the best version of myself for you. I know I've hurt you, and that breaks my heart. Please know that I love you more than anything, and I'll do whatever it takes to make things right.</p>
-            <p>You deserve all the love and care in the world, and I'm committed to giving that to you.</p>
-            <button onclick="nextPage()">Continue</button>
-        </div>
-    </div>
-    <div id="page3" class="page">
-        <div class="content">
-            <h1>With All My Love, Yathaarth</h1>
-            <div id="flowers">
-                🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷<br>
-                🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷<br>
-                🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷<br>
-                🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷
+        <div class="content letter-box">
+            <div class="letter-header">Dear Khushi,</div>
+            <div class="letter-content">
+                <p>I realize I made a mistake, and I'm truly, deeply sorry for it. I've been thinking about what I did, and it breaks my heart knowing I hurt you.</p>
+                
+                <p>I promise to pay more attention in the future and to never, ever repeat this mistake. Your happiness is everything to me, and knowing I caused you pain makes me feel terrible.</p>
+                
+                <p>I'm trying to become the best version of myself—for you, for us. Every single day, I'm working on being better, being more thoughtful, being more present. I know words alone aren't enough, but I want you to know that my commitment to change is real and genuine.</p>
+                
+                <p>I love you more than anything in this world. You mean the world to me, and I'll do whatever it takes to make things right between us. I'll earn back your trust, one day at a time.</p>
+                
+                <p>Please forgive me. I'm sorry from the bottom of my heart.</p>
+                
+                <p style="margin-top: 30px; font-style: italic;">Forever yours,<br><strong>Yathaarth</strong></p>
             </div>
+            <button onclick="nextPage()" class="btn-fancy">Continue</button>
         </div>
     </div>
-    <audio id="audio" loop>
-        <source src="https://www.soundjay.com/misc/sounds/sad-violin-01.wav" type="audio/wav">
-        Your browser does not support the audio element.
+    
+    <div id="page3" class="page">
+        <div class="content flowers-box">
+            <h1 class="closing-title">With All My Love,<br>Yathaarth ❤️</h1>
+            <div id="flowers" class="flowers-burst">
+                <div class="flower-row">🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷</div>
+                <div class="flower-row">🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷</div>
+                <div class="flower-row">🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷</div>
+                <div class="flower-row">🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷</div>
+                <div class="flower-row">🌷 🌷 🌷 🌷 🌷 🌷 🌷 🌷</div>
+            </div>
+            <div class="love-message">I Love You 💕</div>
+        </div>
+    </div>
+    
+    <audio id="bgAudio" volume="0.3" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/music/5178/5178-preview.mp3" type="audio/mpeg">
     </audio>
+    
     <script src="script.js"></script>
 </body>
 </html>
